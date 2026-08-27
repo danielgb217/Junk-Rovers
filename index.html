@@ -140,7 +140,11 @@
         </div>
         <label>Phone<input type="tel" name="phone" required /></label>
         <label>Email<input type="email" name="email" required /></label>
-        <label>Service Address<input name="address" required /></label>
+       <label>
+  Service Address
+  <div id="address-autocomplete"></div>
+  <input type="hidden" id="service-address" name="address" required />
+</label>
         <label>What needs to go? <span class="optional-text">(optional)</span><textarea name="message" rows="5"></textarea></label>
         <button class="btn" type="submit">Send Quote Request</button>
       </form>
@@ -195,5 +199,43 @@
     window.addEventListener('resize', updateDots);
     updateDots();
   </script>
+
+  <script>
+  async function initAddressAutocomplete() {
+    const { PlaceAutocompleteElement } =
+      await google.maps.importLibrary("places");
+
+    const autocomplete = new PlaceAutocompleteElement({
+      componentRestrictions: { country: "us" },
+      types: ["street_address"]
+    });
+
+    autocomplete.setAttribute(
+      "placeholder",
+      "Start typing your service address..."
+    );
+
+    document
+      .getElementById("address-autocomplete")
+      .appendChild(autocomplete);
+
+    autocomplete.addEventListener("gmp-select", async ({ placePrediction }) => {
+      const place = placePrediction.toPlace();
+
+      await place.fetchFields({
+        fields: ["formattedAddress"]
+      });
+
+      document.getElementById("service-address").value =
+        place.formattedAddress || "";
+    });
+  }
+</script>
+
+<script
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAjuRrWTJCM-P2Zg_z4YKvigPejoobTED4&loading=async&libraries=places&callback=initAddressAutocomplete"
+  async
+  defer>
+</script>
 </body>
 </html>
