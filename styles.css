@@ -6,21 +6,28 @@
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}.optional-text{font-size:.78rem;color:var(--muted);font-weight:700}@media(max-width:650px){.form-row{grid-template-columns:1fr}}
 
 /* Google Address Autocomplete */
+#address-autocomplete {
+  width: 100%;
+}
+
 gmp-place-autocomplete {
   width: 100%;
   color-scheme: light;
+  border: 1px solid #ddd;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #fff;
+  box-sizing: border-box;
 }
 
 gmp-place-autocomplete::part(input) {
+  width: 100%;
+  min-height: 52px;
   background: #fff;
   color: #111;
-  border: 1px solid #ddd;
-  border-radius: 14px;
-  min-height: 52px;
+  border: none;
+  outline: none;
   padding: 0 16px;
   font: inherit;
-}
-
-#address-autocomplete {
-  width: 100%;
+  box-sizing: border-box;
 }
