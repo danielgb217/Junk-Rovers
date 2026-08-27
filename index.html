@@ -152,7 +152,7 @@
   />
 </label>
         <fieldset class="contact-preference">
-  <legend>Preferred Contact Method <span class="optional-text">(optional)</span></legend>
+  <legend>Preferred Contact Method <span class="optional">(optional)</span></legend>
 
   <div class="contact-options">
     <label>
@@ -226,15 +226,16 @@
     updateDots();
 
     document.querySelectorAll('input[name="preferred_contact"]').forEach((radio) => {
-  let wasChecked = false;
+  radio.addEventListener("click", function () {
+    if (this.dataset.wasChecked === "true") {
+      this.checked = false;
+      this.dataset.wasChecked = "false";
+    } else {
+      document.querySelectorAll('input[name="preferred_contact"]').forEach((r) => {
+        r.dataset.wasChecked = "false";
+      });
 
-  radio.addEventListener("mousedown", () => {
-    wasChecked = radio.checked;
-  });
-
-  radio.addEventListener("click", () => {
-    if (wasChecked) {
-      radio.checked = false;
+      this.dataset.wasChecked = "true";
     }
   });
 });
