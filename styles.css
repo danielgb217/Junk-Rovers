@@ -5,7 +5,9 @@
 
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}.optional-text{font-size:.78rem;color:var(--muted);font-weight:700}@media(max-width:650px){.form-row{grid-template-columns:1fr}}
 .optional {
-  font-size:.78rem;color:var(--muted);font-weight:700}@media(max-width:650px)
+  font-size: .78rem;
+  color: var(--muted);
+  font-weight: 700;
 }
 /* Preferred Contact Method */
 .contact-preference {
