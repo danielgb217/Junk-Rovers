@@ -4,3 +4,23 @@
 .gallery-section{background:#fff}.carousel-wrap{position:relative;max-width:1050px;margin:0 auto}.work-carousel{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;border-radius:32px;background:#f5f2fb;box-shadow:0 26px 65px rgba(0,0,0,.14);-ms-overflow-style:none;scrollbar-width:none;align-items:center}.work-carousel::-webkit-scrollbar{display:none}.carousel-slide{min-width:100%;margin:0;scroll-snap-align:start;position:relative;background:#f5f2fb;display:flex;align-items:center;justify-content:center;min-height:360px;padding:22px}.carousel-slide img{width:auto;max-width:100%;height:auto;max-height:78vh;object-fit:contain;border-radius:22px;display:block;box-shadow:0 10px 30px rgba(0,0,0,.08)}.carousel-slide figcaption{position:absolute;left:34px;bottom:34px;background:rgba(8,8,8,.78);color:#fff;border:1px solid rgba(255,255,255,.18);backdrop-filter:blur(8px);border-radius:16px;padding:12px 16px;font-weight:900}.carousel-btn{position:absolute;top:50%;transform:translateY(-50%);z-index:2;width:48px;height:48px;border:0;border-radius:999px;background:#fff;color:#080808;font-size:2.2rem;line-height:1;cursor:pointer;box-shadow:0 14px 32px rgba(0,0,0,.22);font-weight:900}.carousel-btn.prev{left:18px}.carousel-btn.next{right:18px}.carousel-dots{display:flex;justify-content:center;gap:10px;margin-top:18px}.carousel-dots button{width:10px;height:10px;border:0;border-radius:999px;background:#c8c2d4;cursor:pointer}.carousel-dots button.active{background:var(--purple);width:28px}@media(max-width:850px){.hero-card .hero-photo{height:auto;max-height:none;object-fit:contain}.carousel-slide{min-height:360px;padding:12px}.carousel-slide img{max-height:72vh}.carousel-btn{width:42px;height:42px;font-size:1.9rem}.carousel-btn.prev{left:10px}.carousel-btn.next{right:10px}.carousel-slide figcaption{left:20px;right:20px;bottom:20px;text-align:center}}
 
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}.optional-text{font-size:.78rem;color:var(--muted);font-weight:700}@media(max-width:650px){.form-row{grid-template-columns:1fr}}
+
+/* Google Address Autocomplete */
+gmp-place-autocomplete {
+  width: 100%;
+  color-scheme: light;
+}
+
+gmp-place-autocomplete::part(input) {
+  background: #fff;
+  color: #111;
+  border: 1px solid #ddd;
+  border-radius: 14px;
+  min-height: 52px;
+  padding: 0 16px;
+  font: inherit;
+}
+
+#address-autocomplete {
+  width: 100%;
+}
