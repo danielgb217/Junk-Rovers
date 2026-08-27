@@ -152,11 +152,11 @@
   />
 </label>
         <fieldset class="contact-preference">
-  <legend>Preferred Contact Method</legend>
+  <legend>Preferred Contact Method <span class="optional">(Optional)</span></legend>
 
   <div class="contact-options">
     <label>
-      <input type="radio" name="preferred_contact" value="Text" required />
+      <input type="radio" name="preferred_contact" value="Text" />
       <span>Text</span>
     </label>
 
@@ -224,6 +224,20 @@
     carousel.addEventListener('scroll', () => window.requestAnimationFrame(updateDots));
     window.addEventListener('resize', updateDots);
     updateDots();
+
+    document.querySelectorAll('input[name="preferred_contact"]').forEach((radio) => {
+  let wasChecked = false;
+
+  radio.addEventListener("mousedown", () => {
+    wasChecked = radio.checked;
+  });
+
+  radio.addEventListener("click", () => {
+    if (wasChecked) {
+      radio.checked = false;
+    }
+  });
+});
   </script>
 
   <script>
@@ -246,19 +260,7 @@
     });
   }
 </script>
-<script>
-  document.querySelectorAll('input[name="preferred_contact"]').forEach((radio) => {
-    radio.addEventListener("mousedown", function () {
-      this.dataset.wasChecked = this.checked;
-    });
-
-    radio.addEventListener("click", function () {
-      if (this.dataset.wasChecked === "true") {
-        this.checked = false;
-      }
-    });
-  });
-</script>
+  
 <script
   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDcWY_7DN3tSq2QDuu0mEYL9WFkbVSXENk&loading=async&libraries=places&callback=initAddressAutocomplete"
   async
