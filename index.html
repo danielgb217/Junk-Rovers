@@ -208,6 +208,7 @@
   <script>
   function initAddressAutocomplete() {
     const input = document.getElementById("service-address");
+    input.placeholder = "";
 
     const autocomplete = new google.maps.places.Autocomplete(input, {
       types: ["address"],
