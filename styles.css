@@ -98,7 +98,21 @@ gmp-place-autocomplete::part(input) {
   font: inherit;
   box-sizing: border-box;
 }
-html, body {
+html {
+  width: 100%;
   max-width: 100%;
-  overflow-x: hidden;
+  overflow-x: clip;
+}
+
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: clip;
+  position: relative;
+}
+.contact-preference,
+.contact-options,
+.quote-form {
+  min-width: 0;
+  max-width: 100%;
 }
