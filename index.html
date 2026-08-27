@@ -142,8 +142,13 @@
         <label>Email<input type="email" name="email" required /></label>
        <label>
   Service Address
-  <div id="address-autocomplete"></div>
-  <input type="hidden" id="service-address" name="address" required />
+  <input
+    id="service-address"
+    type="text"
+    name="address"
+    autocomplete="off"
+    required
+  />
 </label>
         <label>What needs to go? <span class="optional-text">(optional)</span><textarea name="message" rows="5"></textarea></label>
         <button class="btn" type="submit">Send Quote Request</button>
@@ -201,29 +206,21 @@
   </script>
 
   <script>
-  async function initAddressAutocomplete() {
-    const { PlaceAutocompleteElement } =
-      await google.maps.importLibrary("places");
+  function initAddressAutocomplete() {
+    const input = document.getElementById("service-address");
 
-    const autocomplete = new PlaceAutocompleteElement({
+    const autocomplete = new google.maps.places.Autocomplete(input, {
+      types: ["address"],
       componentRestrictions: { country: "us" },
-      types: ["street_address"]
+      fields: ["formatted_address"]
     });
 
+    autocomplete.addListener("place_changed", () => {
+      const place = autocomplete.getPlace();
 
-    document
-      .getElementById("address-autocomplete")
-      .appendChild(autocomplete);
-
-    autocomplete.addEventListener("gmp-select", async ({ placePrediction }) => {
-      const place = placePrediction.toPlace();
-
-      await place.fetchFields({
-        fields: ["formattedAddress"]
-      });
-
-      document.getElementById("service-address").value =
-        place.formattedAddress || "";
+      if (place.formatted_address) {
+        input.value = place.formatted_address;
+      }
     });
   }
 </script>
