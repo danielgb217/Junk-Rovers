@@ -102,3 +102,22 @@ html, body {
   max-width: 100%;
   overflow-x: hidden;
 }
+@media (max-width: 850px) {
+  * {
+    max-width: 100%;
+  }
+
+  .site-header,
+  .hero,
+  .section,
+  .pricing,
+  footer,
+  .quote-form,
+  .carousel-wrap {
+    overflow-x: hidden;
+  }
+
+  .contact-options {
+    flex-wrap: wrap;
+  }
+}
