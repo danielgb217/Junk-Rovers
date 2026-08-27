@@ -246,7 +246,19 @@
     });
   }
 </script>
+<script>
+  document.querySelectorAll('input[name="preferred_contact"]').forEach((radio) => {
+    radio.addEventListener("mousedown", function () {
+      this.dataset.wasChecked = this.checked;
+    });
 
+    radio.addEventListener("click", function () {
+      if (this.dataset.wasChecked === "true") {
+        this.checked = false;
+      }
+    });
+  });
+</script>
 <script
   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDcWY_7DN3tSq2QDuu0mEYL9WFkbVSXENk&loading=async&libraries=places&callback=initAddressAutocomplete"
   async
