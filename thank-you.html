@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Thank You | Junk Rovers</title>
+
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    .thank-you-page {
+      min-height: calc(100vh - 115px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 60px 6%;
+      text-align: center;
+      background: radial-gradient(circle at 50% 30%, #eee4ff, transparent 40%);
+    }
+
+    .thank-you-card {
+      max-width: 700px;
+      width: 100%;
+      background: #fff;
+      border: 1px solid #eee;
+      border-radius: 32px;
+      padding: 55px 40px;
+      box-shadow: 0 25px 60px rgba(0,0,0,.08);
+    }
+
+    .thank-you-icon {
+      width: 70px;
+      height: 70px;
+      margin: 0 auto 22px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--purple);
+      color: #fff;
+      font-size: 2rem;
+      font-weight: 900;
+    }
+
+    .thank-you-card h1 {
+      font-size: clamp(2.3rem, 5vw, 4rem);
+      line-height: 1;
+      margin: 0 0 18px;
+      letter-spacing: -.04em;
+    }
+
+    .thank-you-card p {
+      color: var(--muted);
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin: 0 auto 28px;
+      max-width: 560px;
+    }
+
+    .thank-you-actions {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 600px) {
+      .thank-you-card {
+        padding: 40px 22px;
+      }
+
+      .thank-you-actions {
+        flex-direction: column;
+      }
+
+      .thank-you-actions .btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="site-header">
+    <a href="/" class="brand">
+      <img src="logo.png" alt="Junk Rovers logo" />
+    </a>
+
+    <a class="btn small" href="/">Back to Home</a>
+  </header>
+
+  <main class="thank-you-page">
+    <div class="thank-you-card">
+
+      <div class="thank-you-icon">✓</div>
+
+      <p class="eyebrow">Request Received</p>
+
+      <h1>Thank you!</h1>
+
+      <p>
+        We've received your quote request. Junk Rovers will review the details
+        and contact you shortly.
+      </p>
+
+      <div class="thank-you-actions">
+        <a class="btn" href="/">Back to Home</a>
+        <a class="btn ghost" href="tel:4705182930">Call 470-518-2930</a>
+      </div>
+
+    </div>
+  </main>
+
+</body>
+</html>
