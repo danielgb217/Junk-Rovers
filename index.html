@@ -149,47 +149,75 @@
         <h2>Tell us what you need removed</h2>
         <p>Fill this out and we will contact you to schedule your quote.</p>
       </div>
-      <form id="contact" class="quote-form" action="https://formspree.io/f/mpqggajg" method="post">
-        <div class="form-row">
-          <label>First Name<input type="text" name="first_name" required /></label>
-          <label>Last Name<input type="text" name="last_name" required /></label>
-        </div>
-        <label>Phone<input type="tel" name="phone" required /></label>
-        <label>Email<input type="email" name="email" required /></label>
-        
-       <label>
-  Service Address
-  <input
-    id="service-address"
-    type="text"
-    name="address"
-    autocomplete="off"
-    required
-  />
-</label>
-        <fieldset class="contact-preference">
-  <legend>Preferred Contact Method <span class="optional">(optional)</span></legend>
+    <form id="contact" class="quote-form"
+      action="https://formspree.io/f/mpqggajg"
+      method="post"
+      enctype="multipart/form-data">
 
-  <div class="contact-options">
-    <label>
-      <input type="radio" name="preferred_contact" value="Text" />
-      <span>Text</span>
-    </label>
+  <label>
+    Full Name *
+    <input type="text" name="full_name" required />
+  </label>
 
-    <label>
-      <input type="radio" name="preferred_contact" value="Call" />
-      <span>Call</span>
-    </label>
+  <label>
+    Phone *
+    <input type="tel" name="phone" required />
+  </label>
 
-    <label>
-      <input type="radio" name="preferred_contact" value="Email" />
-      <span>Email</span>
-    </label>
-  </div>
-</fieldset>
-        <label>What needs to go? <span class="optional-text">(optional)</span><textarea name="message" rows="5"></textarea></label>
-        <button class="btn" type="submit">Send Quote Request</button>
-      </form>
+  <label>
+    Email
+    <input type="email" name="email" />
+  </label>
+
+  <label>
+    Service Address *
+    <input
+      id="service-address"
+      type="text"
+      name="address"
+      autocomplete="off"
+      required
+    />
+  </label>
+
+  <fieldset class="contact-preference">
+    <legend>Preferred Contact Method</legend>
+
+    <div class="contact-options">
+      <label>
+        <input type="radio" name="preferred_contact" value="Text" />
+        <span>Text</span>
+      </label>
+
+      <label>
+        <input type="radio" name="preferred_contact" value="Call" />
+        <span>Call</span>
+      </label>
+
+      <label>
+        <input type="radio" name="preferred_contact" value="Email" />
+        <span>Email</span>
+      </label>
+    </div>
+  </fieldset>
+
+  <label>
+    What needs to go?
+    <textarea name="message" rows="5"></textarea>
+  </label>
+
+  <label class="photo-upload">
+    Add Photos
+    <input
+      type="file"
+      name="photos"
+      accept="image/*"
+      multiple
+    />
+  </label>
+
+  <button class="btn" type="submit">Send Quote Request</button>
+</form>
     </section>
   </main>
 
