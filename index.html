@@ -34,6 +34,9 @@
       <a href="#contact">Contact</a>
     </nav>
     <a class="btn small" href="#quote">Free Quote</a>
+    <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+  ☰
+</button>
   </header>
 
   <main id="home">
@@ -310,6 +313,26 @@
   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDcWY_7DN3tSq2QDuu0mEYL9WFkbVSXENk&loading=async&libraries=places&callback=initAddressAutocomplete"
   async
   defer>
+</script>
+
+  <script>
+  const menuToggle = document.querySelector('.menu-toggle');
+  const mobileNav = document.querySelector('.site-header nav');
+
+  menuToggle.addEventListener('click', () => {
+    const isOpen = mobileNav.classList.toggle('mobile-open');
+
+    menuToggle.setAttribute('aria-expanded', isOpen);
+    menuToggle.textContent = isOpen ? '✕' : '☰';
+  });
+
+  mobileNav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileNav.classList.remove('mobile-open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      menuToggle.textContent = '☰';
+    });
+  });
 </script>
 </body>
 </html>
