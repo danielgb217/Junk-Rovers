@@ -294,3 +294,27 @@ body {
     border-bottom-color: #333;
   }
 }
+/* Black sections before quote form */
+.cards,
+.gallery-section,
+.pricing {
+  background: #080808;
+  color: #fff;
+}
+
+/* Services cards */
+.cards article {
+  background: #191919;
+  border: 1px solid #333;
+  color: #fff;
+}
+
+.cards article p {
+  color: #ccc;
+}
+
+/* White quote section */
+.quote-section {
+  background: #fff;
+  color: #080808;
+}
