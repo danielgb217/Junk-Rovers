@@ -1,41 +1,34 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18358756646"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-18358756646');
-</script>
-
-    <!-- Event snippet for Submit lead form conversion page -->
-<script>
-  gtag('event', 'conversion', {
-      'send_to': 'AW-18358756646/SYIjCNmV_-scEKbKkbJE',
-      'value': 1.0,
-      'currency': 'USD'
-  });
-</script>
-
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Thank You | Chiwawa Junk Removal</title>
 
+  <!-- Google Ads tracking -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18358756646"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-18358756646');
+
+    gtag('event', 'conversion', {
+      'send_to': 'AW-18358756646/SYIjCNmV_-scEKbKkbJE',
+      'value': 1.0,
+      'currency': 'USD'
+    });
+  </script>
+
+  <!-- Favicons -->
   <link rel="icon" href="favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
-  <link rel="stylesheet" href="styles.css" />
-    <style>
-  :root {
-    --purple: #8702BE;
-  }
-</style>
+  <link rel="stylesheet" href="styles.css">
 
   <style>
     .thank-you-page {
@@ -44,18 +37,19 @@
       align-items: center;
       justify-content: center;
       padding: 60px 6%;
+      background: #080808;
+      color: #fff;
       text-align: center;
-      background: radial-gradient(circle at 50% 30%, #f3e2fa, transparent 40%);
     }
 
     .thank-you-card {
-      max-width: 700px;
       width: 100%;
-      background: #fff;
-      border: 1px solid #eee;
-      border-radius: 32px;
+      max-width: 700px;
       padding: 55px 40px;
-      box-shadow: 0 25px 60px rgba(0,0,0,.08);
+      background: #191919;
+      border: 1px solid #333;
+      border-radius: 32px;
+      box-shadow: 0 25px 60px rgba(0,0,0,.3);
     }
 
     .thank-you-icon {
@@ -65,7 +59,7 @@
       display: grid;
       place-items: center;
       border-radius: 50%;
-      background: var(--purple);
+      background: var(--purple, #8702BE);
       color: #fff;
       font-size: 2rem;
       font-weight: 900;
@@ -76,14 +70,23 @@
       line-height: 1;
       margin: 0 0 18px;
       letter-spacing: -.04em;
+      color: #fff;
     }
 
     .thank-you-card p {
-      color: var(--muted);
+      color: #ccc;
       font-size: 1.1rem;
       line-height: 1.6;
       margin: 0 auto 28px;
       max-width: 560px;
+    }
+
+    .thank-you-card .eyebrow {
+      color: var(--purple, #8702BE);
+      font-size: .78rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .14em;
     }
 
     .thank-you-actions {
@@ -113,7 +116,7 @@
 
   <header class="site-header">
     <a href="/" class="brand">
-      <img src="logo.png" alt="Chiwawa Junk Removal logo" />
+      <img src="logo.png" alt="Chiwawa Junk Removal logo">
     </a>
 
     <a class="btn small" href="/">Back to Home</a>
@@ -134,11 +137,12 @@
       </p>
 
       <div class="thank-you-actions">
-  <a class="btn" href="/">Back to Home</a>
-</div>
+        <a class="btn" href="/">Back to Home</a>
+      </div>
 
     </div>
   </main>
 
 </body>
 </html>
+
