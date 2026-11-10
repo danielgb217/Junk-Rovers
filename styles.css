@@ -333,3 +333,84 @@ body {
   background: #fff;
   color: #080808;
 }
+
+/* CHIWAWA FINAL DARK THEME */
+
+/* Make the main website sections black */
+body {
+  background: #080808;
+}
+
+.section:not(.quote-section) {
+  background: #080808;
+  color: #fff;
+}
+
+/* Section headings and descriptions */
+.section:not(.quote-section) h2,
+.section:not(.quote-section) h3 {
+  color: #fff;
+}
+
+.section:not(.quote-section) p {
+  color: #ccc;
+}
+
+/* Dark service cards */
+.cards article {
+  background: #191919;
+  border: 1px solid #333;
+  color: #fff;
+}
+
+/* Dark gallery */
+.gallery-section {
+  background: #080808;
+  color: #fff;
+}
+
+/* Dark pricing */
+.pricing {
+  background: #080808;
+  color: #fff;
+}
+
+.price-card {
+  background: #191919;
+  border: 1px solid #333;
+  color: #fff;
+}
+
+/* Dark About Us section */
+.about-box {
+  background: #191919;
+  border: 1px solid #333;
+}
+
+/* White quote section */
+.quote-section {
+  background: #fff !important;
+  color: #080808;
+}
+
+.quote-section h2,
+.quote-section h3 {
+  color: #080808;
+}
+
+.quote-section p {
+  color: #6b6b76;
+}
+
+/* Keep the form inputs white */
+.quote-form input,
+.quote-form textarea {
+  background: #fff;
+  color: #080808;
+}
+
+/* Keep the footer black */
+footer {
+  background: #080808;
+  color: #fff;
+}
