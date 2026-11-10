@@ -318,3 +318,18 @@ body {
   background: #fff;
   color: #080808;
 }
+/* Entire What We Do section */
+.section:has(.cards) {
+  background: #080808;
+  color: #fff;
+}
+
+.section:has(.cards) .section-heading p {
+  color: #ccc;
+}
+
+/* Keep quote section white */
+.quote-section {
+  background: #fff;
+  color: #080808;
+}
