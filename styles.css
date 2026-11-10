@@ -169,3 +169,128 @@ body {
     border-bottom: 0;
   }
 }
+
+/* CHIWAWA NEW WEBSITE THEME */
+
+/* Black header */
+.site-header {
+  background: rgba(8, 8, 8, 0.96);
+  border-bottom: 1px solid #292929;
+}
+
+.site-header nav a {
+  color: #fff;
+}
+
+.menu-toggle {
+  color: #fff;
+}
+
+/* Black hero */
+.hero {
+  background: radial-gradient(
+    circle at 75% 20%,
+    #321047,
+    #080808 55%
+  );
+  color: #fff;
+}
+
+.hero .lead {
+  color: #d0d0d0;
+}
+
+.hero-card {
+  background: #171717;
+  border-color: #303030;
+}
+
+.hero-card .hero-photo {
+  background: #171717;
+}
+
+.hero .btn.ghost {
+  background: transparent;
+  color: #fff;
+  border-color: #777;
+}
+
+/* White services */
+.cards article {
+  background: #fff;
+}
+
+/* Black gallery */
+.gallery-section {
+  background: #080808;
+  color: #fff;
+}
+
+.gallery-section p {
+  color: #ccc;
+}
+
+.work-carousel,
+.carousel-slide {
+  background: #191919;
+}
+
+/* White About section */
+/* Keep the existing black About box for contrast */
+
+/* Black pricing */
+.pricing {
+  background: #080808;
+  color: #fff;
+}
+
+.pricing > div > p {
+  color: #ccc;
+}
+
+.price-card {
+  background: #191919;
+  border: 1px solid #333;
+  color: #fff;
+}
+
+.price-card div {
+  border-bottom-color: #383838;
+}
+
+.price-card small {
+  color: #bbb;
+}
+
+/* White quote form */
+.quote-section {
+  background: #fff;
+  color: #080808;
+}
+
+/* Purple consistency */
+.btn {
+  box-shadow: 0 12px 28px rgba(135, 2, 190, 0.22);
+}
+
+.contact-options input:checked + span {
+  background: var(--purple);
+  border-color: var(--purple);
+}
+
+.contact-options input:focus-visible + span {
+  outline-color: var(--purple);
+}
+
+/* Mobile menu */
+@media (max-width: 850px) {
+  .site-header nav.mobile-open {
+    background: #101010;
+    border-bottom-color: #333;
+  }
+
+  .site-header nav.mobile-open a {
+    color: #fff;
+    border-bottom-color: #333;
+  }
+}
